@@ -1,0 +1,12 @@
+{{{
+      exports({ to: app.configPath('imagekit.ts') })
+}}}
+import { defineConfig } from '{{packageName}}'
+import env from '#start/env'
+
+export default defineConfig({
+  urlEndpoint: env.get('IMAGEKIT_URL_ENDPOINT'),
+  publicKey: env.get('IMAGEKIT_PUBLIC_KEY'),
+  privateKey: env.get('IMAGEKIT_PRIVATE_KEY')
+})
+
