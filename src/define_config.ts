@@ -1,7 +1,7 @@
 import { InvalidArgumentsException } from '@adonisjs/core/exceptions'
-import { ImageKitConfig } from './types.js'
+import { ImageKitOptions } from 'imagekit/dist/libs/interfaces/ImageKitOptions.js'
 
-export function defineConfig(config: ImageKitConfig): ImageKitConfig {
+export function defineConfig(config: ImageKitOptions): ImageKitOptions {
   if (!config.publicKey) {
     throw new InvalidArgumentsException('The "publicKey" is required')
   }
@@ -27,5 +27,7 @@ export function defineConfig(config: ImageKitConfig): ImageKitConfig {
     publicKey: config.publicKey,
     privateKey: config.privateKey,
     urlEndpoint: config.urlEndpoint,
+    transformationPosition: config.transformationPosition,
+    uploadEndpoint: config.uploadEndpoint,
   }
 }

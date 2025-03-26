@@ -28,7 +28,7 @@ export async function configure(command: ConfigureCommand) {
   })
 
   await codemods.updateRcFile((rcFile) => {
-    rcFile.addProvider(`${packageName}/provider`)
+    rcFile.addProvider(`${packageName}/imagekit_provider`, ['web'])
   })
 
   await codemods.defineEnvVariables({
@@ -43,5 +43,6 @@ export async function configure(command: ConfigureCommand) {
       IMAGEKIT_PUBLIC_KEY: 'Env.schema.string()',
       IMAGEKIT_PRIVATE_KEY: 'Env.schema.string()',
     },
+    leadingComment: 'Variables for ImageKit',
   })
 }

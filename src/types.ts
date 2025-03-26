@@ -5,9 +5,3 @@ declare module '@adonisjs/core/types' {
     imagekit: ImageKit
   }
 }
-
-export interface ImageKitConfig {
-  publicKey: string
-  privateKey: string
-  urlEndpoint: string
-}
