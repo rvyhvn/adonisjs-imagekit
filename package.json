@@ -7,6 +7,7 @@
   },
   "type": "module",
   "files": [
+    "build/",
     "build/src",
     "build/providers",
     "build/stubs",
@@ -69,7 +70,7 @@
   "np": {
     "message": "chore(release): %s",
     "tag": "latest",
-    "branch": "main",
+    "branch": "master",
     "anyBranch": false
   },
   "c8": {
